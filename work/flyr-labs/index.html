@@ -4,7 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FLYR Labs: building a design team without leaving design behind — Joris van den Ende</title>
+<meta name="description" content="Growing design at FLYR from one to seven people while staying hands-on, with the flight filters as an example.">
 <meta name="robots" content="noindex">
+<link rel="preload" href="../../assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
 <body>
@@ -20,11 +22,192 @@
 </header>
 
 <main id="main">
-  <section class="container pending" aria-labelledby="case-title">
+  <section class="container case-intro" aria-labelledby="case-title">
     <p class="case-intro__client">FLYR Labs</p>
     <h1 id="case-title">Building a design team without leaving design behind</h1>
-    <p class="pending__lead">I helped grow design at FLYR from one to seven people, while staying hands-on in complex SaaS software.</p>
-    <p class="pending__note">The full case is being written. In the meantime, the <a href="../cbr/">CBR case</a> shows how cases on this site are set up.</p>
+    <p class="case-intro__lead">At FLYR, I helped grow design from one to seven people while remaining hands-on in complex SaaS product work. Building team capability and solving interaction problems were part of the same responsibility.</p>
+    <dl class="facts">
+      <div><dt>Company</dt><dd>FLYR Labs</dd></div>
+      <div><dt>Product</dt><dd>Revenue management software for airlines</dd></div>
+      <div class="facts__wide"><dt>Role</dt><dd>Design lead <span class="review-tag">Job title to confirm</span></dd></div>
+    </dl>
+  </section>
+
+  <section class="container case-section" aria-labelledby="team-title">
+    <div class="split">
+      <div class="case-section__body">
+        <h2 id="team-title">Growing design capability</h2>
+        <p class="big-number" aria-label="From one to seven designers">1 → 7</p>
+        <p>The design team grew from one to seven people. Team development, mentoring and design system leadership were part of my role, next to designing myself.</p>
+      </div>
+      <div class="cards" style="margin-top: 0">
+        <div class="card">
+          <p class="card__label">Mentoring</p>
+          <h3>From designer to team lead</h3>
+          <p>I coached a designer into the role of design system team lead, in late 2023.</p>
+        </div>
+        <div class="card">
+          <p class="card__label">Direction</p>
+          <h3>Through product pivots</h3>
+          <p>I led the team through many product pivots between 2022 and 2024.</p>
+        </div>
+        <div class="card">
+          <p class="card__label">Hands-on</p>
+          <h3>Enterprise interaction problems</h3>
+          <p>I kept designing complex software myself. The flight filters below are one example.</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top: 16px"><span class="review-tag">Permission to show FLYR material to confirm</span></p>
+  </section>
+
+  <section class="container case-section" aria-labelledby="filters-title">
+    <div class="split">
+      <h2 id="filters-title">Hands-on: making complex flight filters readable and editable</h2>
+      <div class="case-section__body">
+        <p>Airlines keep adjusting prices and seat availability per flight, and revenue teams analyse thousands of flights to decide where to act. FLYR builds AI-driven revenue management software for them.</p>
+        <p>This project redesigned how analysts filter down to the flights that matter: a query editor for selecting flights by combining conditions with AND, OR, NOT and groups.</p>
+      </div>
+    </div>
+    <figure class="stage stage--wide" style="margin-top: 32px">
+      <img class="screen" src="../../assets/img/flyr-final.webp" width="1438" height="292" loading="lazy" alt="Final design: the filter bar expanded for editing, with conditions such as OW Market PHXSFO, Not, Influence ID PAA-100, Dep Month and LF Act joined by And and Or, in grouped rows.">
+      <figcaption>Final design: the filter bar expanded for editing, above the analysis it filters.</figcaption>
+    </figure>
+  </section>
+
+  <section class="container case-section" aria-labelledby="start-title">
+    <div class="split">
+      <div class="case-section__body">
+        <h2 id="start-title">A list of filters could no longer express the selection</h2>
+        <p>The original interface split filtering in two: a drawer on the right to choose and apply filters, and a strip above the table showing what was active.</p>
+        <p>A flat list could add filters, but had no way to express alternatives, exclusions or groups.</p>
+        <div class="query" aria-label="Schema, not part of the interface">
+          <p>A list: every filter adds to the selection</p>
+          <div class="query__row"><span class="chip">Yield · Act.</span><span class="chip">LF</span><span class="chip">Market</span></div>
+          <p>Needed: alternatives, exclusions and groups</p>
+          <div class="query__row"><span class="paren">(</span><span class="chip">Market A</span><span class="op">OR</span><span class="chip">Market B</span><span class="paren">)</span><span class="op">AND NOT</span><span class="chip">Influence ID</span></div>
+        </div>
+      </div>
+      <div class="shots">
+        <figure>
+          <img class="screen" src="../../assets/img/flyr-before.webp" width="1400" height="846" loading="lazy" alt="The analysis screen before the redesign: a single RT Market AKLSIN filter above a pivot table, build curves chart and a large flights table.">
+          <figcaption><b>Before.</b> The analysis screen, with a single filter above the results.</figcaption>
+        </figure>
+        <div class="shots shots--side">
+          <figure>
+            <img class="screen" src="../../assets/img/flyr-filter-strip.webp" width="1135" height="266" loading="lazy" alt="The filter strip above the pivot table, showing Yield Act., LF and Market 12, and 85 of 27,554 flights.">
+            <figcaption><b>Filter strip.</b> The active selection, above the table.</figcaption>
+          </figure>
+          <figure>
+            <img class="screen screen--narrow" src="../../assets/img/flyr-drawer-original.webp" width="213" height="684" loading="lazy" alt="The original filter drawer: a search field, filter categories such as Departure window, Passenger market, Load Factor and Yield, and an Apply button.">
+            <figcaption><b>Drawer.</b> Choose filters and apply them.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="explored-title">
+    <div class="split">
+      <div class="case-section__body">
+        <h2 id="explored-title">Keeping everything in the drawer made the logic harder to follow</h2>
+        <p>One explored direction kept the applied conditions, the operators and groups, and the filter catalogue in one narrow column. Conditions stacked, joined by Not or And; a shaded block grouped conditions that belonged together.</p>
+        <p>The query had to be read top to bottom, between controls and the filter catalogue.</p>
+        <p class="step__look">One of three explored drawer designs. Its bottom actions are placeholders.</p>
+      </div>
+      <figure class="stage">
+        <img class="screen" src="../../assets/img/flyr-drawer-explored.webp" width="360" height="755" loading="lazy" alt="Explored drawer with an Applied section: OW Market, Not, Influence ID, And, and a grouped pair of Departure Month conditions, above a Market filter section." style="max-width: 300px; margin-inline: auto">
+        <figcaption>Explored direction, not the shipped solution.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="decision-title">
+    <div class="split">
+      <h2 id="decision-title">Separate choosing filters from composing the query</h2>
+      <div class="case-section__body">
+        <p>The drawer stays the place to find and pick filters. The query itself moves out of the drawer into its own editor above the results, where there is room to read and combine the conditions with And, Or, Not and groups.</p>
+      </div>
+    </div>
+    <figure class="stage stage--wide" style="margin-top: 32px">
+      <img class="screen" src="../../assets/img/flyr-separate.webp" width="1392" height="560" loading="lazy" alt="Analysis screen with the query editor open above the results, conditions such as NDO, LF XD Bld Act, LAC Value and Final LF Exp joined by And, and the filter drawer on the right with categories such as Market, Flight and Departure Date.">
+      <figcaption>Compose the query above the results (centre); choose conditions in the drawer (right).</figcaption>
+    </figure>
+  </section>
+
+  <section class="container case-section" aria-labelledby="states-title">
+    <div class="split">
+      <h2 id="states-title">Give editing space, then return attention to the results</h2>
+      <div class="case-section__body">
+        <p>A query needs room while it changes, and very little once it is applied. The filter bar expands for editing and collapses to one line for reviewing.</p>
+        <p class="step__look">Examples of each state from different screens, not one sequence.</p>
+      </div>
+    </div>
+    <div class="stage stage--wide shots" style="margin-top: 32px">
+      <figure>
+        <img class="screen" src="../../assets/img/flyr-expanded.webp" width="742" height="255" loading="lazy" alt="Expanded filter bar: rows of conditions joined by Not, And and Or, with Reset, Clear All, Cancel and Apply." style="max-width: 742px">
+        <figcaption><b>Editing.</b> Expanded: room to read and change every condition.</figcaption>
+      </figure>
+      <figure>
+        <img class="screen" src="../../assets/img/flyr-collapsed.webp" width="1392" height="86" loading="lazy" alt="Collapsed filter bar on one line: OW Market PHXSFO, Not, Influence ID PAA-100, And, with an Expand link.">
+        <figcaption><b>Reviewing.</b> Collapsed to one line once applied.</figcaption>
+      </figure>
+      <figure>
+        <img class="screen" src="../../assets/img/flyr-groups.webp" width="760" height="37" loading="lazy" alt="Detail of a filter group with two conditions and a nested subgroup, using generic Title Subtitle labels." style="max-width: 760px">
+        <figcaption><b>Structure.</b> Groups and subgroups, shown with generic labels.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="use-title">
+    <h2 id="use-title">What we learned from use</h2>
+    <p class="step__look" style="margin-top: 8px">Qualitative observations from demos and use after launch. No usage figures.</p>
+    <div class="cards">
+      <div class="card"><p class="card__label">Before launch</p><h3>Eager to have it</h3><p>In the first demos, users already couldn’t wait for it to be introduced.</p></div>
+      <div class="card"><p class="card__label">After launch</p><h3>Picked up quickly</h3><p>Once live, the filters were used a lot and people picked them up fast.</p></div>
+      <div class="card"><p class="card__label">Compared to</p><h3>More intuitive than spreadsheets</h3><p>It matched what users needed, and felt more intuitive than filtering in Excel and other table tools.</p></div>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="carry-title">
+    <h2 id="carry-title">What I would carry into the next complex tool</h2>
+    <ol class="lessons">
+      <li><span class="lessons__num">01</span><div><h3>Give each task its own place</h3><p>Picking filters and composing their logic are different jobs. Separating them made both clearer.</p></div></li>
+      <li><span class="lessons__num">02</span><div><h3>Design for the edit and for the glance</h3><p>A query needs space while it changes, and very little once it is applied.</p></div></li>
+      <li><span class="lessons__num">03</span><div><h3>Keep the parts consistent</h3><p>Chips that look alike but each have a clear role keep long queries scannable.</p></div></li>
+    </ol>
+    <p style="margin-top: 20px; max-width: 46rem; color: var(--ink-2)">One thing from research: users tended to shape their work to what the tool offered and expected little ease of use, which made it harder to uncover what could be better.</p>
+  </section>
+
+  <section class="container case-section" aria-labelledby="also-title">
+    <div class="split">
+      <div class="case-section__body">
+        <h2 id="also-title">Also: adding a section where it is needed</h2>
+        <p>A smaller proposal from the same product: add a section to the table right where it is needed, instead of in a separate configuration step.</p>
+        <p class="step__look">Proposal. The table holds placeholder text.</p>
+      </div>
+      <figure class="stage stage--wide">
+        <img class="screen" src="../../assets/img/flyr-add-section.webp" width="728" height="390" loading="lazy" alt="Proposal: an ‘Add Section’ panel opened inside the table, with fields for Ancillary, Seat Zone and Luggage Type.">
+      </figure>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="result-title">
+    <h2 id="result-title">What this case shows, and what it doesn’t</h2>
+    <div class="limits">
+      <div class="limit">
+        <h3>Shown</h3>
+        <p>The growth of the design team, my part in developing people, and the flight filters from starting point to the shipped filter bar.</p>
+      </div>
+      <div class="limit">
+        <h3>Not claimed</h3>
+        <p>Business impact or efficiency gains. Observations about use are qualitative.</p>
+      </div>
+      <div class="limit limit--open">
+        <h3>Still open</h3>
+        <p>My job title, my exact role in the filters project, and permission to show FLYR material. <strong>To confirm.</strong></p>
+      </div>
+    </div>
   </section>
 
   <nav class="container next-case" aria-label="Next case">

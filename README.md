@@ -6,12 +6,12 @@ Static site, no build step. Plain HTML and one stylesheet, ready for GitHub Page
 
 | Route | File | Status |
 | --- | --- | --- |
-| `/` | `index.html` | Designed (review version) |
-| `/work/cbr/` | `work/cbr/index.html` | Designed (review version) |
-| `/work/statiegeld/` | `work/statiegeld/index.html` | Placeholder, case still to be written |
-| `/work/mijnpensioenoverzicht/` | `work/mijnpensioenoverzicht/index.html` | Placeholder |
-| `/work/flyr-labs/` | `work/flyr-labs/index.html` | Placeholder |
-| `/about/` | `about/index.html` | Placeholder |
+| `/` | `index.html` | Review version |
+| `/work/cbr/` | `work/cbr/index.html` | Review version |
+| `/work/statiegeld/` | `work/statiegeld/index.html` | Review version |
+| `/work/mijnpensioenoverzicht/` | `work/mijnpensioenoverzicht/index.html` | Review version |
+| `/work/flyr-labs/` | `work/flyr-labs/index.html` | Review version |
+| `/about/` | `about/index.html` | Placeholder, still to be written |
 | — | `404.html` | Not-found page |
 
 All internal links are relative, so the site works both as a user site (`username.github.io`), on a custom domain, and as a project site (`username.github.io/repo/`). The only exception is the homepage link in `404.html`, which points to `/`; on a project site, change it to `/repo/`.
@@ -48,23 +48,24 @@ Phone frames are pure CSS (`.phone`): a thin dark border and a soft shadow aroun
 
 ## Images
 
-| File | Source | Size |
-| --- | --- | --- |
-| `cbr-reflect-moment.webp` | CBR prototype, reflection question (multiple choice) | 600 × 1298 |
-| `cbr-reflect-examday.webp` | CBR prototype, ‘Hoe begon je examendag?’ | 600 × 1298 |
-| `cbr-check.webp` | CBR prototype, ‘Dit zien we tot nu toe’ | 600 × 1298 |
-| `cbr-plan.webp` | CBR prototype, ‘Dit is jouw plan.’ | 600 × 1298 |
-| `statiegeld-check.webp` | Statie Check | 520 × 1086 |
-| `statiegeld-stash.webp` | Statie Stash home | 520 × 1095 |
-| `statiegeld-map.webp` | Statie Map | 520 × 1088 |
-| `mpo-before.webp` | Mijnpensioenoverzicht, current site (before) | 520 × 1177 |
-| `mpo-after.webp` | Mijnpensioenoverzicht, redesign (after) | 390 × 844 — low resolution, replace with a 2× export |
-| `flyr-add-section.webp` | FLYR, in-table ‘Add section’ proposal | 728 × 390 |
+All screens are WebP files in `assets/img/`, made from the original project material.
+Phone screens are trimmed so no white or light border shows between the screen and the
+phone frame; the Statiegeld success messages have their light corners filled with the
+sheet's own colours. The script that does this is `tools/build_images.py` (not needed to
+run the site).
+
+- `cbr-*`: CBR prototype screens.
+- `statiegeld-*`: Statiegeld app screens, success messages and wireframes.
+- `mpo-*`: Mijnpensioenoverzicht, existing site (`before`) and prototype screens. These
+  are 390 px wide; a 2× export from Figma would look sharper.
+- `flyr-*`: FLYR desktop screens (shown without phone frame).
 
 ## Open points
 
 - Home intro is draft copy.
 - CBR: exact role, team and period; whether the flow was tested and went live; the reasoning behind the plan that grows while you answer.
+- Statiegeld: role, team and process contribution; status wording (‘concept design’ or ‘concept and early build’).
+- Mijnpensioenoverzicht: verify the gross and net constraint.
+- FLYR Labs: job title, exact role in the filters project, permission to show FLYR material.
 - LinkedIn URL (no LinkedIn link is shown until it is known).
-- Statiegeld, Mijnpensioenoverzicht and FLYR Labs case pages, and the About page, are still to be written.
-- Statiegeld screens still show the iOS status bar from the original screenshots.
+- About page.
