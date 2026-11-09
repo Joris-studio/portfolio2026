@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="en" class="review">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mijnpensioenoverzicht: detail only when you ask for it — Joris van den Ende</title>
 <meta name="description" content="Tracing five usability problems back to one structural problem, and redesigning the pension overview around one clear answer.">
-<meta name="robots" content="noindex">
 <link rel="preload" href="../../assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/css/site.css">
 </head>
@@ -17,7 +16,6 @@
   <nav class="site-nav" aria-label="Main">
     <a href="../../#work" aria-current="page">Work</a>
     <a href="../../about/">About</a>
-    <a class="site-nav__contact" href="mailto:info@joris.studio">Contact</a>
   </nav>
 </header>
 
@@ -29,16 +27,16 @@
     <dl class="facts">
       <div><dt>Client</dt><dd>Mijnpensioenoverzicht.nl</dd></div>
       <div><dt>Role</dt><dd>Lead designer</dd></div>
-      <div><dt>Period</dt><dd>Q4, via Frog Design</dd></div>
+      <div><dt>Agency</dt><dd>Frog Design</dd></div>
       <div class="facts__wide"><dt>My contribution</dt><dd>Analysis, journeys, mobile prototype</dd></div>
     </dl>
   </section>
 
   <figure class="container case-hero">
     <div class="case-hero__stage phone-row">
-      <div class="phone"><img src="../../assets/img/mpo-estimate.webp" width="390" height="844" fetchpriority="high" alt="Notice before the overview: ‘Op deze website zie je een schatting van je verwachte pensioen’, with ‘Ok, het is een schatting’ and ‘Leg eens uit?’."></div>
-      <div class="phone phone--extra"><img src="../../assets/img/mpo-overview.webp" width="390" height="844" alt="The new overview: ‘Als je 67 + 3 maanden bent, is je verwachte pensioen’, AOW plus three pensions, € 2.400 net per month."></div>
-      <div class="phone"><img src="../../assets/img/mpo-age-open.webp" width="390" height="844" fetchpriority="high" alt="The age choice open, listing ages from 66 to 69 in steps of three months."></div>
+      <div class="phone"><img src="../../assets/img/mpo-estimate.webp" width="390" height="845" fetchpriority="high" alt="Notice before the overview: ‘Op deze website zie je een schatting van je verwachte pensioen’, with ‘Ok, het is een schatting’ and ‘Leg eens uit?’."></div>
+      <div class="phone phone--extra"><img src="../../assets/img/mpo-overview.webp" width="390" height="845" alt="The new overview: ‘Als je 67 + 3 maanden bent, is je verwachte pensioen’, AOW plus three pensions, € 2.400 net per month."></div>
+      <div class="phone"><img src="../../assets/img/mpo-age-open.webp" width="390" height="845" fetchpriority="high" alt="The age choice open, listing ages from 66 to 69 in steps of three months."></div>
     </div>
     <figcaption>The estimate notice, the overview and the age choice. Prototype screens, in Dutch; all amounts are example data.</figcaption>
   </figure>
@@ -67,7 +65,7 @@
           </div>
         </div>
         <figure class="shot">
-          <div class="phone" style="--w: 160px"><img src="../../assets/img/mpo-before-intro.webp" width="600" height="1417" loading="lazy" alt="The existing site: an introduction text, then a donut chart showing € 2.922 net per month."></div>
+          <img class="flat" src="../../assets/img/mpo-before-intro.webp" width="600" height="1417" loading="lazy" alt="The existing site: an introduction text, then a donut chart showing € 2.922 net per month.">
           <figcaption><b>Before.</b> Explanation and a pie chart first.</figcaption>
         </figure>
       </div>
@@ -79,16 +77,16 @@
       <div class="case-section__body">
         <h2 id="room-title">Room to change</h2>
         <p>Visitors wanted to know their monthly amount quickly. Rebuilding the platform was out of scope, so I worked with the building blocks that were there.</p>
-        <p>One constraint weighed heavily: gross and net could not be set per amount. That made what you show, and when, even more important. <span class="review-tag">To verify</span></p>
+        <p>There were also constraints in how amounts could be shown. That made what you show, and when, even more important.</p>
         <p>My trade-off: no new features. Order and pace the information that was already there.</p>
       </div>
       <div class="evidence phone-pair">
         <figure class="shot">
-          <div class="phone"><img src="../../assets/img/mpo-estimate.webp" width="390" height="844" loading="lazy" alt="The estimate notice: ‘Op deze website zie je een schatting van je verwachte pensioen’."></div>
+          <div class="phone"><img src="../../assets/img/mpo-estimate.webp" width="390" height="845" loading="lazy" alt="The estimate notice: ‘Op deze website zie je een schatting van je verwachte pensioen’."></div>
           <figcaption><b>Said once.</b> That amounts are an estimate is stated before the overview.</figcaption>
         </figure>
         <figure class="shot">
-          <div class="phone"><img src="../../assets/img/mpo-breakdown.webp" width="386" height="750" loading="lazy" alt="‘Toon alle bedragen’ opened: AOW € 14.100, ABP € 11.400, NN € 4.000 and Zwitserleven € 3.500, gross per year € 33.000 and € 2.400 net per month."></div>
+          <img class="flat" src="../../assets/img/mpo-breakdown.webp" width="386" height="750" loading="lazy" alt="‘Toon alle bedragen’ opened: AOW € 14.100, ABP € 11.400, NN € 4.000 and Zwitserleven € 3.500, gross per year € 33.000 and € 2.400 net per month.">
           <figcaption><b>On request.</b> Gross per provider sits behind ‘Toon alle bedragen’. Net stays the answer.</figcaption>
         </figure>
       </div>
@@ -114,37 +112,34 @@
     <div class="steps">
       <article class="step">
         <div class="step__media">
-          <div class="phone"><img src="../../assets/img/mpo-overview.webp" width="390" height="844" loading="lazy" alt="Overview: ‘Als je 67 + 3 maanden bent, is je verwachte pensioen’, the AOW and pensions blocks, and € 2.400 net per month."></div>
+          <div class="phone"><img src="../../assets/img/mpo-overview.webp" width="390" height="845" loading="lazy" alt="Overview: ‘Als je 67 + 3 maanden bent, is je verwachte pensioen’, the AOW and pensions blocks, and € 2.400 net per month."></div>
         </div>
         <div class="step__text">
           <p class="step__num">1 · Insight</p>
           <h3>What will I get each month?</h3>
           <p>The overview opens with one sentence and one amount. The sentence holds the age; the amount is net per month. That is the number someone can act on. Everything else on the page supports that answer instead of crowding it.</p>
-          <p class="step__look">Look at: the age inside the sentence, and the one net amount below it.</p>
         </div>
       </article>
 
       <article class="step">
         <div class="step__media">
-          <div class="phone"><img src="../../assets/img/mpo-providers.webp" width="390" height="844" loading="lazy" alt="Pensions panel at 67 + 3 months: ABP € 11.400, NN € 4.000 and Zwitserleven € 3.500, each with its start date."></div>
+          <div class="phone"><img src="../../assets/img/mpo-providers.webp" width="390" height="845" loading="lazy" alt="Pensions panel at 67 + 3 months: ABP € 11.400, NN € 4.000 and Zwitserleven € 3.500, each with its start date."></div>
         </div>
         <div class="step__text">
           <p class="step__num">2 · Understanding</p>
           <h3>How do AOW and my pensions add up?</h3>
           <p>AOW and pensions sit above the amount as two blocks, with a plus sign between them, so the sum is visible without reading a table. Tap a block for the detail: the amount per provider, and whether you choose the start date yourself.</p>
-          <p class="step__look">Look at: ‘kies jij’ or ‘staat vast’ under each provider.</p>
         </div>
       </article>
 
       <article class="step">
         <div class="step__media">
-          <div class="phone"><img src="../../assets/img/mpo-aow.webp" width="390" height="844" loading="lazy" alt="Explanation: ‘Jouw AOW-leeftijd is nog niet vastgesteld’, with ‘Ok, duidelijk’ and ‘Leg eens uit?’."></div>
+          <div class="phone"><img src="../../assets/img/mpo-aow.webp" width="390" height="845" loading="lazy" alt="Explanation: ‘Jouw AOW-leeftijd is nog niet vastgesteld’, with ‘Ok, duidelijk’ and ‘Leg eens uit?’."></div>
         </div>
         <div class="step__text">
           <p class="step__num">3 · Control</p>
           <h3>What can I do, and where do I learn more?</h3>
           <p>Explanation sits with the topic it explains. Unsure about your AOW age? The AOW block links straight to a short answer, with the option to read on. Not everything can be arranged on MPO; for things like the start date, MPO refers visitors to their pension provider, so that next step is visible.</p>
-          <p class="step__look">Look at: ‘Ok, duidelijk’ for done, ‘Leg eens uit?’ for more.</p>
         </div>
       </article>
     </div>
@@ -160,12 +155,12 @@
       <div class="evidence phone-pair">
         <figure class="shot">
           <p class="label-before">Before</p>
-          <div class="phone"><img src="../../assets/img/mpo-before-amounts.webp" width="600" height="1428" loading="lazy" alt="The existing site: a list of net amounts per starting age, from 60 to 68."></div>
+          <img class="flat" src="../../assets/img/mpo-before-amounts.webp" width="600" height="1428" loading="lazy" alt="The existing site: a list of net amounts per starting age, from 60 to 68.">
           <figcaption>Every age and amount at once, lower on the page.</figcaption>
         </figure>
         <figure class="shot">
           <p class="label-after">After</p>
-          <div class="phone"><img src="../../assets/img/mpo-age-open.webp" width="390" height="844" loading="lazy" alt="The age choice open, with ages from 66 to 69 in steps of three months."></div>
+          <div class="phone"><img src="../../assets/img/mpo-age-open.webp" width="390" height="845" loading="lazy" alt="The age choice open, with ages from 66 to 69 in steps of three months."></div>
           <figcaption>Years and months, in steps of three. Not calendar years: that is not how people think about their pension.</figcaption>
         </figure>
       </div>
@@ -199,10 +194,6 @@
       <div class="limit">
         <h3>Not claimed</h3>
         <p>Effects after implementation. This case covers the prototype phase; no figures after launch are shown.</p>
-      </div>
-      <div class="limit limit--open">
-        <h3>Still open</h3>
-        <p>The exact wording of the gross and net constraint. <strong>To verify.</strong></p>
       </div>
     </div>
   </section>

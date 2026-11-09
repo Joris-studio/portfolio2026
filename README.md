@@ -6,12 +6,12 @@ Static site, no build step. Plain HTML and one stylesheet, ready for GitHub Page
 
 | Route | File | Status |
 | --- | --- | --- |
-| `/` | `index.html` | Review version |
-| `/work/cbr/` | `work/cbr/index.html` | Review version |
-| `/work/statiegeld/` | `work/statiegeld/index.html` | Review version |
-| `/work/mijnpensioenoverzicht/` | `work/mijnpensioenoverzicht/index.html` | Review version |
-| `/work/flyr-labs/` | `work/flyr-labs/index.html` | Review version |
-| `/about/` | `about/index.html` | Placeholder, still to be written |
+| `/` | `index.html` | Ready |
+| `/work/cbr/` | `work/cbr/index.html` | Ready |
+| `/work/statiegeld/` | `work/statiegeld/index.html` | Ready |
+| `/work/mijnpensioenoverzicht/` | `work/mijnpensioenoverzicht/index.html` | Ready |
+| `/work/flyr-labs/` | `work/flyr-labs/index.html` | Ready |
+| `/about/` | `about/index.html` | Short pitch and contact |
 | — | `404.html` | Not-found page |
 
 All internal links are relative, so the site works both as a user site (`username.github.io`), on a custom domain, and as a project site (`username.github.io/repo/`). The only exception is the homepage link in `404.html`, which points to `/`; on a project site, change it to `/repo/`.
@@ -29,43 +29,35 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## Review mode
-
-This is a review version:
-
-- Every page has `class="review"` on `<html>`. That shows the dashed coral tags marking draft copy and facts still to confirm. Remove the class to hide all tags at once.
-- Every page has `<meta name="robots" content="noindex">`. Remove it when the site may be found by search engines.
-
 ## Structure
 
 ```
 assets/css/site.css     All styles. Colour tokens at the top; mobile first, wider layouts from 760 px and 900/1024 px.
 assets/fonts/           Inter Tight (variable, latin + latin-ext), self-hosted. Licence: OFL-LICENSE.txt
 assets/img/             Project screens as WebP, derived from the original portfolio material.
+assets/video/           CBR prototype recording (MP4, no sound) and its poster image.
+assets/js/video.js      Play button for the video: no autoplay; native controls without JavaScript.
 ```
 
 Phone frames are pure CSS (`.phone`): a thin dark border and a soft shadow around a complete screen. Change a frame's size with the `--w` custom property.
 
-## Images
+## Images and video
 
-All screens are WebP files in `assets/img/`, made from the original project material.
-Phone screens are trimmed so no white or light border shows between the screen and the
-phone frame; the Statiegeld success messages have their light corners filled with the
-sheet's own colours. The script that does this is `tools/build_images.py` (not needed to
-run the site).
+All screens are WebP files in `assets/img/`, made from the original project material
+with `tools/build_images.py` (not needed to run the site).
 
-- `cbr-*`: CBR prototype screens.
-- `statiegeld-*`: Statiegeld app screens, success messages and wireframes.
-- `mpo-*`: Mijnpensioenoverzicht, existing site (`before`) and prototype screens. These
-  are 390 px wide; a 2× export from Figma would look sharper.
-- `flyr-*`: FLYR desktop screens (shown without phone frame).
+- Every screen in a phone frame has the same ratio (9:19.5). Screens that were slightly
+  wider or narrower are brought to that ratio by extending flat background only
+  (tab-bar area, dark backdrop edges). Nothing is stretched or cut off.
+- Long or partial screens (the Mijnpensioenoverzicht "before" pages and the amounts
+  detail) are shown flat, outside a phone frame (`.flat`).
+- The two CBR question screens from the earlier export had text running outside its
+  answer boxes, so they are no longer used.
+- `assets/video/cbr-prototype.mp4` is the CBR prototype recording (v5), 51 s, no audio
+  track. The poster is its first frame.
 
 ## Open points
 
-- Home intro is draft copy.
-- CBR: exact role, team and period; whether the flow was tested and went live; the reasoning behind the plan that grows while you answer.
-- Statiegeld: role, team and process contribution; status wording (‘concept design’ or ‘concept and early build’).
-- Mijnpensioenoverzicht: verify the gross and net constraint.
-- FLYR Labs: job title, exact role in the filters project, permission to show FLYR material.
-- LinkedIn URL (no LinkedIn link is shown until it is known).
-- About page.
+- LinkedIn: no link is shown until the URL is known.
+- Mijnpensioenoverzicht: the year of the project (only shown once known).
+- Mijnpensioenoverzicht screens are 390 px wide; a 2× export from Figma would look sharper.

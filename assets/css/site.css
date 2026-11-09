@@ -70,27 +70,16 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 }
 .skip-link:focus { top: 12px; color: #FFFFFF; }
 
-/* Review tags: visible while <html> has class "review". Remove that class to hide them all. */
-.review-tag {
-  display: none;
-  font-size: 13px; font-weight: 600; line-height: 1.3;
-  color: var(--tag-ink); background: var(--tag-bg);
-  border: 1px dashed var(--tag-border); border-radius: 6px; padding: 3px 8px;
-}
-.review .review-tag { display: inline-block; }
-
 /* ---------- Header ---------- */
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
 .site-header__name { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; }
 .site-nav { display: flex; gap: 4px; font-size: 15px; font-weight: 500; }
 .site-nav a { text-decoration: none; padding: 12px 8px; }
 .site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
-.site-nav__contact { display: none; }
 @media (min-width: 760px) {
   .site-header { min-height: 88px; }
   .site-header__name { font-size: 18px; }
   .site-nav { gap: 16px; font-size: 16px; }
-  .site-nav__contact { display: inline; }
 }
 
 /* ---------- Phone frame ---------- */
@@ -103,12 +92,33 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
   background: var(--frame);
   box-shadow: 0 1px 2px rgba(32, 35, 38, 0.10), 0 16px 36px rgba(32, 35, 38, 0.14);
 }
-/* The complete screen at its own proportions: no crop, no letterbox, so no light edges */
-.phone img {
+/* Every phone has the same ratio. Screens are prepared at that ratio
+   (tools/build_images.py), so nothing is stretched or letterboxed. */
+.phone img, .phone video {
+  display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: center top;
   border-radius: calc(var(--w) * 0.125);
 }
+/* Long or partial screens, shown flat outside a phone */
+.flat { display: block; width: var(--w, 220px); flex: none; height: auto; border-radius: 10px; border: 1px solid var(--line); background: #FFFFFF; box-shadow: 0 1px 2px rgba(32, 35, 38, 0.06), 0 10px 28px rgba(32, 35, 38, 0.08); }
+
+/* ---------- Video in a phone ---------- */
+.phone--video { position: relative; }
+.video-play {
+  position: absolute; left: 50%; top: 80%; transform: translate(-50%, -50%);
+  display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px 0 18px; white-space: nowrap;
+  border: 0; border-radius: 999px; background: var(--ink); color: #FFFFFF;
+  font: inherit; font-size: 16px; font-weight: 600; cursor: pointer;
+  box-shadow: 0 8px 24px rgba(32, 35, 38, 0.28);
+}
+.video-play:hover { background: #000000; }
+.video-play:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; }
+.video-play svg { width: 20px; height: 20px; flex: none; }
+.video-play[hidden] { display: none; }
 .phone-pair { display: flex; justify-content: center; align-items: flex-start; gap: clamp(16px, 4vw, 40px); }
 .phone-pair > :nth-child(2) { margin-top: clamp(28px, 4vw, 56px); }
 .phone-row { display: flex; justify-content: center; align-items: flex-start; gap: clamp(16px, 4vw, 56px); }
@@ -151,8 +161,7 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 /* ---------- Home: case list ---------- */
 .work { padding-bottom: 56px; }
 .section-label { font-size: 15px; font-weight: 600; color: var(--muted); margin-bottom: 16px; }
-.case-item { display: flex; flex-direction: column; gap: 20px; padding-block: 28px 40px; border-top: 1px solid var(--line); }
-.case-item:last-child { border-bottom: 1px solid var(--line); }
+.case-item { display: flex; flex-direction: column; gap: 20px; padding-block: 28px 40px; }
 .case-item__text { display: flex; flex-direction: column; gap: 12px; }
 .case-item__client { font-size: 14px; font-weight: 600; color: var(--coral-ink); }
 .case-item h3 { font-size: 28px; font-weight: 500; line-height: 1.12; letter-spacing: -0.02em; }
@@ -166,7 +175,7 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 .case-item__media--pair { gap: 18px; padding-top: 20px; }
 .case-item__media--pair > :nth-child(2) { margin-top: 24px; }
 .case-item__media--pair .shot { gap: 8px; }
-.case-item__media--pair .phone { --w: 148px; }
+.case-item__media--pair .phone, .case-item__media--pair .flat { --w: 148px; }
 .case-item__media--wide { flex-direction: column; gap: 12px; padding: 20px; }
 .case-item__media--wide img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); background: #FFFFFF; }
 .case-item__media--wide p { font-size: 13px; line-height: 1.45; color: var(--muted); }
@@ -180,7 +189,7 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
   .case-item h3 { font-size: 38px; line-height: 1.1; }
   .case-item__text p:not(.case-item__client) { font-size: 18px; }
   .case-item__media { order: 0; flex: 2 1 560px; min-width: 0; border-radius: 24px; padding: 48px 32px 64px; gap: 36px; }
-  .case-item__media .phone, .case-item__media--pair .phone { --w: 220px; }
+  .case-item__media .phone, .case-item__media--pair .phone, .case-item__media--pair .flat { --w: 220px; }
   .case-item__media .phone--extra { display: block; }
   .case-item__media > :nth-child(2) { margin-top: 32px; }
   .case-item__media--wide { min-height: 500px; padding: 40px; justify-content: center; align-items: center; gap: 16px; }
@@ -231,7 +240,7 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 @media (min-width: 900px) {
   .case-hero { margin-top: 56px; }
   .case-hero__stage { border-radius: 28px; padding: 56px 40px 88px; }
-  .case-hero .phone { --w: 250px; }
+  .case-hero .phone { --w: 220px; }
   .case-hero .phone--extra { display: block; }
   .case-hero figcaption { padding-top: 14px; font-size: 14px; }
 }
@@ -252,14 +261,14 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 }
 
 .evidence { margin-top: 8px; border-radius: 20px; background: var(--surface); padding: 24px 12px 28px; }
-.evidence .phone { --w: 150px; }
+.evidence .phone, .evidence .flat { --w: 150px; }
 .evidence .shot { width: var(--shot-w, 150px); }
 .evidence .shot figcaption { font-size: 13px; line-height: 1.45; color: var(--ink-2); }
 .evidence .phone-pair > :nth-child(2) { margin-top: 28px; }
 @media (min-width: 900px) {
   .evidence { margin-top: 0; border-radius: 24px; padding: 48px 40px; }
-  .evidence .phone { --w: 240px; }
-  .evidence .shot { --shot-w: 240px; }
+  .evidence .phone, .evidence .flat { --w: 220px; }
+  .evidence .shot { --shot-w: 220px; }
   .evidence .shot figcaption { font-size: 15px; }
   .evidence .phone-pair { gap: 48px; }
   .evidence .phone-pair > :nth-child(2) { margin-top: 40px; }
@@ -278,7 +287,7 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
   .steps { gap: 56px; margin-top: 56px; }
   .step { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 32px 64px; }
   .step__media { flex: 1 1 520px; border-radius: 24px; padding: 48px; }
-  .step__media .phone { --w: 280px; }
+  .step__media .phone { --w: 260px; }
   .step__text { flex: 1 1 340px; max-width: 460px; gap: 14px; }
   .step__num { font-size: 15px; }
   .step h3 { font-size: 28px; }
@@ -328,7 +337,7 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 .phone-row--three > :nth-child(2) { margin-top: 0; }
 @media (min-width: 900px) {
   .stage { border-radius: 24px; padding: 48px 40px 56px; }
-  .stage .phone { --w: 240px; }
+  .stage .phone { --w: 220px; }
   .stage .phone--extra { display: block; }
   .stage--wide { padding: 40px; }
   .stage figcaption, .stage-caption { font-size: 14px; }
@@ -391,7 +400,8 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 .lessons p { font-size: 16px; color: var(--ink-2); }
 @media (min-width: 900px) { .lessons li { gap: 32px; padding: 26px 0; } .lessons__num { width: 56px; font-size: 28px; } .lessons h3 { font-size: 24px; } .lessons p { font-size: 18px; } }
 
-.statement { background: var(--ink); color: #F5F5F2; }
+.statement { background: var(--ink); color: #F5F5F2; margin-top: 56px; }
+@media (min-width: 900px) { .statement { margin-top: 96px; } }
 .statement__inner { padding-block: 64px; display: flex; flex-direction: column; gap: 16px; }
 .statement p.statement__label { font-size: 15px; font-weight: 600; color: #B9BBBD; }
 .statement blockquote { margin: 0; max-width: 28ch; font-size: clamp(28px, 3.6vw, 52px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; }
@@ -419,3 +429,23 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
   .stage--three .phone { --w: 180px; }
   .stage--three .shot { width: 180px; }
 }
+
+/* ---------- Case intro with video ---------- */
+.case-top { display: flex; flex-direction: column; gap: 32px; }
+.case-top .case-intro { flex: 1 1 auto; min-width: 0; }
+.case-video { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.case-video .phone { --w: 220px; }
+.case-video figcaption { max-width: 300px; font-size: 13px; line-height: 1.45; color: var(--muted); text-align: center; }
+@media (min-width: 900px) {
+  .case-top { flex-direction: row; align-items: center; gap: 64px; }
+  .case-video { flex: none; padding-top: 64px; }
+  .case-video .phone { --w: 260px; }
+  .case-video figcaption { font-size: 14px; }
+}
+
+/* A step without its own image (shown in the video above) */
+.step--text .step__text { max-width: 40rem; }
+.shots--side .flat { --w: 160px; }
+.about__mail { padding-top: 8px; }
+.pending { padding-bottom: 72px; }
+@media (min-width: 760px) { .pending { padding-bottom: 120px; } }
