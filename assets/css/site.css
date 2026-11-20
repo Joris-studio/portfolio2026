@@ -449,3 +449,40 @@ a:focus-visible { outline: 3px solid var(--coral-ink); outline-offset: 4px; bord
 .about__mail { padding-top: 8px; }
 .pending { padding-bottom: 72px; }
 @media (min-width: 760px) { .pending { padding-bottom: 120px; } }
+
+/* ---------- Diagrams (Statiegeld leadership) ---------- */
+.diagram-figure { margin-top: 28px; }
+.diagram-figure--hero { margin-top: 32px; }
+.diagram-figure figcaption { padding-top: 10px; font-size: 13px; line-height: 1.45; color: var(--muted); }
+.diagram { display: flex; justify-content: center; padding: 24px 12px; }
+.diagram svg { display: block; width: 100%; height: auto; }
+.diagram .diagram__mobile { max-width: 420px; }
+.diagram .diagram__desktop { display: none; }
+@media (min-width: 900px) {
+  .diagram-figure { margin-top: 48px; }
+  .diagram-figure--hero { margin-top: 56px; }
+  .diagram-figure figcaption { padding-top: 14px; font-size: 14px; }
+  .diagram { padding: 48px 40px; }
+  .diagram .diagram__mobile { display: none; }
+  .diagram .diagram__desktop { display: block; max-width: 1120px; }
+}
+
+/* Home: mini journey for the leadership case */
+.mini-journey { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; }
+.mini-journey__features { flex: none; width: 92px; display: flex; flex-direction: column; gap: 8px; }
+.mini-journey__features span { display: block; padding: 6px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #CFCDC4; font-size: 13px; font-weight: 500; text-align: center; }
+.mini-journey__arrow { flex: none; width: 28px; height: 16px; color: var(--ink-2); }
+.mini-journey__goal { flex: 1 1 0; min-width: 0; max-width: 300px; display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: #FFFFFF; border: 1.5px solid var(--ink); }
+.mini-journey__label { font-size: 11px; font-weight: 600; color: var(--muted); }
+.mini-journey__title { font-size: 15px; font-weight: 600; line-height: 1.25; }
+.mini-journey__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.mini-journey__tags span { padding: 4px 10px; border-radius: 999px; background: var(--surface); border: 1px solid #CFCDC4; font-size: 12px; font-weight: 500; }
+@media (min-width: 900px) {
+  .mini-journey { gap: 28px; }
+  .mini-journey__features { width: 140px; gap: 10px; }
+  .mini-journey__features span { font-size: 16px; padding: 7px 12px; }
+  .mini-journey__goal { padding: 24px; gap: 14px; }
+  .mini-journey__label { font-size: 14px; }
+  .mini-journey__title { font-size: 19px; }
+  .mini-journey__tags span { font-size: 14px; padding: 5px 12px; }
+}
