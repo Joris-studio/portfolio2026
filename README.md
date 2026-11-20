@@ -11,6 +11,7 @@ Static site, no build step. Plain HTML and one stylesheet, ready for GitHub Page
 | `/work/statiegeld/` | `work/statiegeld/index.html` | Ready |
 | `/work/mijnpensioenoverzicht/` | `work/mijnpensioenoverzicht/index.html` | Ready |
 | `/work/flyr-labs/` | `work/flyr-labs/index.html` | Ready |
+| `/work/statiegeld-leadership/` | `work/statiegeld-leadership/index.html` | Ready (journey step names simplified) |
 | `/about/` | `about/index.html` | Short pitch and contact |
 | — | `404.html` | Not-found page |
 

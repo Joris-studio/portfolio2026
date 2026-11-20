@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statiegeld: from separate features to one user journey — Joris van den Ende</title>
+<meta name="description" content="How bringing the screens of a deposit return app together around the user’s goal helped teams discuss dependencies and decide what the first version needed.">
+<link rel="preload" href="../../assets/fonts/inter-tight-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="container site-header">
+  <a class="site-header__name" href="../../">Joris van den Ende</a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../../#work" aria-current="page">Work</a>
+    <a href="../../about/">About</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="container case-intro" aria-labelledby="case-title">
+    <p class="case-intro__client">Statiegeld · Leadership</p>
+    <h1 id="case-title">From separate features to one user journey</h1>
+    <p class="case-intro__lead">Several development teams, the design team and external partners were building a deposit return app under time pressure. Work started from features. By bringing the existing screens together around the user’s goal, the teams could see what was missing, discuss dependencies and decide what the first version needed.</p>
+    <dl class="facts">
+      <div><dt>Client</dt><dd>Verpact</dd></div>
+      <div><dt>Role</dt><dd>Design Lead</dd></div>
+      <div><dt>Agency</dt><dd>Dot Control</dd></div>
+      <div><dt>Period</dt><dd>2026</dd></div>
+      <div><dt>Focus</dt><dd>Design leadership</dd></div>
+    </dl>
+  </section>
+
+  <div class="container">
+    <figure class="diagram-figure diagram-figure--hero">
+      <div class="stage diagram">
+        <svg class="diagram__mobile" viewBox="0 0 310 860" width="310" height="860" role="img" aria-label="The user’s goal, return packaging and receive the deposit, frames a recurring journey of steps. The features sit under the steps they contribute to. Screens and interaction, functionality, and systems and APIs inform each other, and meet in a shared test: can the user complete the whole journey? That leads to choices for the first version." font-family="Inter Tight, Arial, sans-serif"><defs><marker id="ah-i-d3-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#3A3D40"/></marker><marker id="ah-m-d3-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#5F6265"/></marker><marker id="ah-c-d3-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#B8361F"/></marker></defs>
+<polyline points="32,358 12,358 12,130 31,130" stroke="#5F6265" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-m-d3-mobile)"/>
+<polyline points="100,156 100,179" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-mobile)"/>
+<polyline points="100,232 100,255" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-mobile)"/>
+<polyline points="100,308 100,331" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-mobile)"/>
+<polyline points="155,384 155,452" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="155,498 155,534" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-mobile)" marker-start="url(#ah-i-d3-mobile)"/>
+<polyline points="155,582 155,618" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-mobile)" marker-start="url(#ah-i-d3-mobile)"/>
+<polyline points="155,664 155,695" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-mobile)"/>
+<polyline points="155,760 155,791" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-mobile)"/>
+<rect x="0" y="0" width="310" height="72" rx="12" fill="#202326"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#CFCDC4"><tspan x="155" y="24.0">User goal</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#FFFFFF"><tspan x="155" y="47.0">Return packaging and receive the deposit</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="32" y="88.0">Recurring journey</tspan></text>
+<rect x="33.0" y="105.0" width="134" height="50" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#202326"><tspan x="100" y="130.0">Step 1</tspan></text>
+<rect x="33.0" y="181.0" width="134" height="50" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#202326"><tspan x="100" y="206.0">Step 2</tspan></text>
+<rect x="33.0" y="257.0" width="134" height="50" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#202326"><tspan x="100" y="282.0">Step 3</tspan></text>
+<rect x="33.0" y="333.0" width="134" height="50" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#202326"><tspan x="100" y="358.0">Step 4</tspan></text>
+<rect x="184.5" y="102.5" width="125" height="25" rx="13.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#202326"><tspan x="247.0" y="115.0">Login</tspan></text>
+<rect x="184.5" y="132.5" width="125" height="25" rx="13.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#202326"><tspan x="247.0" y="145.0">Profile</tspan></text>
+<rect x="184.5" y="193.5" width="125" height="25" rx="13.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#202326"><tspan x="247.0" y="206.0">Map</tspan></text>
+<rect x="184.5" y="269.5" width="125" height="25" rx="13.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#202326"><tspan x="247.0" y="282.0">Scanning</tspan></text>
+<rect x="184.5" y="345.5" width="125" height="25" rx="13.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="500" fill="#202326"><tspan x="247.0" y="358.0">Wallet</tspan></text>
+<rect x="1.0" y="453.0" width="308" height="42" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="155" y="474.0">Screens &amp; interaction</tspan></text>
+<rect x="1.0" y="537.0" width="308" height="42" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="155" y="558.0">Functionality</tspan></text>
+<rect x="1.0" y="621.0" width="308" height="42" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="155" y="642.0">Systems &amp; APIs</tspan></text>
+<rect x="1.0" y="697.0" width="308" height="62" rx="32" fill="#FFFFFF" stroke="#B8361F" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="155" y="718.0">Can the user complete</tspan><tspan x="155" y="738.0">the whole journey?</tspan></text>
+<rect x="1.0" y="793.0" width="308" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text x="155" y="824" text-anchor="middle" dominant-baseline="central" font-size="15" fill="#202326"><tspan font-weight="600">First version</tspan><tspan font-weight="500" fill="#3A3D40"> · needed now, or later?</tspan></text>
+</svg>
+        <svg class="diagram__desktop" viewBox="0 0 1120 568" width="1120" height="568" role="img" aria-label="The user’s goal, return packaging and receive the deposit, frames a recurring journey of steps. The features sit under the steps they contribute to. Screens and interaction, functionality, and systems and APIs inform each other, and meet in a shared test: can the user complete the whole journey? That leads to choices for the first version." font-family="Inter Tight, Arial, sans-serif"><defs><marker id="ah-i-d3-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#3A3D40"/></marker><marker id="ah-m-d3-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#5F6265"/></marker><marker id="ah-c-d3-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#B8361F"/></marker></defs>
+<polyline points="1004,144 1004,112 116,112 116,143" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-m-d3-desktop)"/>
+<polyline points="232,176 295,176" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-desktop)"/>
+<polyline points="528,176 591,176" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-desktop)"/>
+<polyline points="824,176 887,176" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-desktop)"/>
+<polyline points="560,312 560,344" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="168,344 952,344" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="168,344 168,376" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="560,344 560,376" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="952,344 952,376" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="338,408 390,408" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-desktop)" marker-start="url(#ah-i-d3-desktop)"/>
+<polyline points="730,408 782,408" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-desktop)" marker-start="url(#ah-i-d3-desktop)"/>
+<polyline points="168,440 168,472" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="560,440 560,472" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="952,440 952,472" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="168,472 952,472" stroke="#5F6265" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="560,472 560,503" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-desktop)"/>
+<polyline points="800,536 863,536" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d3-desktop)"/>
+<rect x="0" y="0" width="1120" height="64" rx="12" fill="#202326"/>
+<text x="560" y="32" text-anchor="middle" dominant-baseline="central" font-size="21" fill="#FFFFFF"><tspan font-weight="500" fill="#CFCDC4">User goal  ·  </tspan><tspan font-weight="600">Return packaging and receive the deposit</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#5F6265"><tspan x="560" y="92.0">Recurring journey</tspan></text>
+<rect x="1.0" y="145.0" width="230" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="600" fill="#202326"><tspan x="116" y="176.0">Step 1</tspan></text>
+<rect x="297.0" y="145.0" width="230" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="600" fill="#202326"><tspan x="412" y="176.0">Step 2</tspan></text>
+<rect x="593.0" y="145.0" width="230" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="600" fill="#202326"><tspan x="708" y="176.0">Step 3</tspan></text>
+<rect x="889.0" y="145.0" width="230" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="600" fill="#202326"><tspan x="1004" y="176.0">Step 4</tspan></text>
+<rect x="0.5" y="224.5" width="231" height="39" rx="20.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="500" fill="#202326"><tspan x="116.0" y="244.0">Login</tspan></text>
+<rect x="0.5" y="272.5" width="231" height="39" rx="20.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="500" fill="#202326"><tspan x="116.0" y="292.0">Profile</tspan></text>
+<rect x="296.5" y="224.5" width="231" height="39" rx="20.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="500" fill="#202326"><tspan x="412.0" y="244.0">Map</tspan></text>
+<rect x="592.5" y="224.5" width="231" height="39" rx="20.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="500" fill="#202326"><tspan x="708.0" y="244.0">Scanning</tspan></text>
+<rect x="888.5" y="224.5" width="231" height="39" rx="20.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="500" fill="#202326"><tspan x="1004.0" y="244.0">Wallet</tspan></text>
+<rect x="1.0" y="377.0" width="334" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="600" fill="#202326"><tspan x="168" y="408.0">Screens &amp; interaction</tspan></text>
+<rect x="393.0" y="377.0" width="334" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="600" fill="#202326"><tspan x="560" y="408.0">Functionality</tspan></text>
+<rect x="785.0" y="377.0" width="334" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="600" fill="#202326"><tspan x="952" y="408.0">Systems &amp; APIs</tspan></text>
+<rect x="321.0" y="505.0" width="478" height="62" rx="32" fill="#FFFFFF" stroke="#B8361F" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="600" fill="#202326"><tspan x="560" y="536.0">Can the user complete the whole journey?</tspan></text>
+<rect x="865.0" y="505.0" width="254" height="62" rx="12" fill="#FFFFFF" stroke="#202326" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="600" fill="#202326"><tspan x="992" y="525.0">First version</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="500" fill="#3A3D40"><tspan x="992" y="547.0">needed now, or later?</tspan></text>
+</svg>
+      </div>
+      <figcaption>The user’s goal as the shared frame for features, screens and systems. Steps simplified.</figcaption>
+    </figure>
+  </div>
+
+  <section class="container case-section" aria-labelledby="role-title">
+    <div class="split">
+      <h2 id="role-title">My part</h2>
+      <div class="case-section__body">
+        <p>Together with the design team I collected the existing screens and ordered them around the user’s goal. I then presented that overview, first to key stakeholders and then to a wider group.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="situation-title">
+    <div class="split">
+      <h2 id="situation-title">Built feature by feature</h2>
+      <div class="case-section__body">
+        <p>The client steered on the features needed for launch. Work started from features and back-end functionality, which were then worked out in the app and its screens. Content, design and APIs each had their own workstream.</p>
+        <p>Each team delivered its part. What was missing was a shared view of the complete user journey: how the parts would work together for someone using the app.</p>
+      </div>
+    </div>
+    <figure class="diagram-figure">
+      <div class="stage diagram">
+        <svg class="diagram__mobile" viewBox="0 0 310 300" width="310" height="300" role="img" aria-label="Five features each move separately through development and design, and arrive as separate screens in the app. There is no shared view of the whole journey." font-family="Inter Tight, Arial, sans-serif"><defs><marker id="ah-i-d1-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#3A3D40"/></marker><marker id="ah-m-d1-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#5F6265"/></marker><marker id="ah-c-d1-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#B8361F"/></marker></defs>
+<polyline points="76,46 99,46" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="152,46 175,46" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="76,94 99,94" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="140,94 175,94" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="76,142 99,142" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="152,142 175,142" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="76,190 99,190" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="146,190 175,190" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="76,238 99,238" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<polyline points="136,238 175,238" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-mobile)"/>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="0" y="8.0">Feature</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="100" y="8.0">Dev</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="176" y="8.0">Design</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="252" y="8.0">App</tspan></text>
+<rect x="0.5" y="28.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="46.0">Login</tspan></text>
+<rect x="100.75" y="28.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="28.75" width="42.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="76.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="94.0">Profile</tspan></text>
+<rect x="100.75" y="76.75" width="38.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="76.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="124.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="142.0">Scanning</tspan></text>
+<rect x="100.75" y="124.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="124.75" width="38.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="172.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="190.0">Map</tspan></text>
+<rect x="100.75" y="172.75" width="44.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="172.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="220.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="238.0">Wallet</tspan></text>
+<rect x="100.75" y="220.75" width="34.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="220.75" width="34.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="256.75" y="30.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="282.75" y="86.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="262.75" y="140.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="284.75" y="176.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="258.75" y="218.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<text text-anchor="start" dominant-baseline="central" font-size="14" font-weight="600" fill="#202326"><tspan x="0" y="288.0">No shared view of the whole journey</tspan></text>
+</svg>
+        <svg class="diagram__desktop" viewBox="0 0 1120 400" width="1120" height="400" role="img" aria-label="Five features each move separately through development and design, and arrive as separate screens in the app. There is no shared view of the whole journey." font-family="Inter Tight, Arial, sans-serif"><defs><marker id="ah-i-d1-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#3A3D40"/></marker><marker id="ah-m-d1-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#5F6265"/></marker><marker id="ah-c-d1-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#B8361F"/></marker></defs>
+<polyline points="180,64 259,64" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="460,64 539,64" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="180,128 259,128" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="420,128 539,128" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="180,192 259,192" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="460,192 539,192" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="180,256 259,256" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="440,256 539,256" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="180,320 259,320" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<polyline points="400,320 539,320" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d1-desktop)"/>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="0" y="8.0">Features</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="260" y="8.0">Development &amp; back-end</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="540" y="8.0">Design &amp; screens</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="820" y="8.0">In the app</tspan></text>
+<rect x="0.5" y="40.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="64.0">Login</tspan></text>
+<rect x="260.75" y="40.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="40.75" width="148.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="104.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="128.0">Profile</tspan></text>
+<rect x="260.75" y="104.75" width="158.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="104.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="168.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="192.0">Scanning</tspan></text>
+<rect x="260.75" y="168.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="168.75" width="168.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="232.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="256.0">Map</tspan></text>
+<rect x="260.75" y="232.75" width="178.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="232.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="296.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="320.0">Wallet</tspan></text>
+<rect x="260.75" y="296.75" width="138.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="296.75" width="138.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="840.75" y="44.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="940.75" y="120.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="1030.75" y="56.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="880.75" y="232.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="1050.75" y="212.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="820" y="384.0">No shared view of the whole journey</tspan></text>
+</svg>
+      </div>
+      <figcaption>A simplified view of the dominant way of working, not a formal handover process.</figcaption>
+    </figure>
+  </section>
+
+  <section class="container case-section" aria-labelledby="questions-title">
+    <div class="split">
+      <h2 id="questions-title">Putting it together raised earlier questions</h2>
+      <div class="case-section__body">
+        <p>Once the parts came together, questions surfaced that could not be answered at the end of the chain. Was there an overview of the journey? Did the screens fit together? Did the systems connect?</p>
+        <p>Each of those questions pointed back to insights and choices earlier in the chain, and to one question for the whole team: what is needed for launch, and what can wait?</p>
+      </div>
+    </div>
+    <figure class="diagram-figure">
+      <div class="stage diagram">
+        <svg class="diagram__mobile" viewBox="0 0 310 480" width="310" height="480" role="img" aria-label="The same chain, with a dashed line running back from the app to design and development: no overview, screens that are not consistent, and systems that don’t connect. It ends at the question what is needed for launch and what can wait." font-family="Inter Tight, Arial, sans-serif"><defs><marker id="ah-i-d2-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#3A3D40"/></marker><marker id="ah-m-d2-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#5F6265"/></marker><marker id="ah-c-d2-mobile" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#B8361F"/></marker></defs>
+<polyline points="76,46 99,46" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="152,46 175,46" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="76,94 99,94" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="140,94 175,94" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="76,142 99,142" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="152,142 175,142" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="76,190 99,190" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="146,190 175,190" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="76,238 99,238" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="136,238 175,238" stroke="#3A3D40" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-mobile)"/>
+<polyline points="271,256 271,300 16,300 16,415" stroke="#B8361F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#ah-c-d2-mobile)"/>
+<polyline points="126,300 126,265" stroke="#B8361F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#ah-c-d2-mobile)"/>
+<polyline points="202,300 202,265" stroke="#B8361F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#ah-c-d2-mobile)"/>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="0" y="8.0">Feature</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="100" y="8.0">Dev</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="176" y="8.0">Design</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="12" font-weight="600" fill="#5F6265"><tspan x="252" y="8.0">App</tspan></text>
+<rect x="0.5" y="28.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="46.0">Login</tspan></text>
+<rect x="100.75" y="28.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="28.75" width="42.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="76.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="94.0">Profile</tspan></text>
+<rect x="100.75" y="76.75" width="38.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="76.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="124.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="142.0">Scanning</tspan></text>
+<rect x="100.75" y="124.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="124.75" width="38.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="172.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="190.0">Map</tspan></text>
+<rect x="100.75" y="172.75" width="44.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="172.75" width="50.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="220.5" width="75" height="35" rx="18.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#202326"><tspan x="38.0" y="238.0">Wallet</tspan></text>
+<rect x="100.75" y="220.75" width="34.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="176.75" y="220.75" width="34.5" height="34.5" rx="6" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="256.75" y="30.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="282.75" y="86.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="262.75" y="140.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="284.75" y="176.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="258.75" y="218.75" width="22.5" height="36.5" rx="5" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<text x="40" y="328" dominant-baseline="central" font-size="14" fill="#3A3D40"><tspan font-weight="600" fill="#202326">No overview</tspan> · one journey?</text>
+<text x="40" y="358" dominant-baseline="central" font-size="14" fill="#3A3D40"><tspan font-weight="600" fill="#202326">Not consistent</tspan> · do the screens fit?</text>
+<text x="40" y="388" dominant-baseline="central" font-size="14" fill="#3A3D40"><tspan font-weight="600" fill="#202326">Systems don’t connect</tspan> · which dependencies?</text>
+<rect x="1.0" y="417.0" width="308" height="62" rx="12" fill="#FFFFFF" stroke="#B8361F" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="155" y="438.0">What is needed for launch?</tspan><tspan x="155" y="458.0">What can wait?</tspan></text>
+</svg>
+        <svg class="diagram__desktop" viewBox="0 0 1120 520" width="1120" height="520" role="img" aria-label="The same chain, with a dashed line running back from the app to design and development: no overview, screens that are not consistent, and systems that don’t connect. It ends at the question what is needed for launch and what can wait." font-family="Inter Tight, Arial, sans-serif"><defs><marker id="ah-i-d2-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#3A3D40"/></marker><marker id="ah-m-d2-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#5F6265"/></marker><marker id="ah-c-d2-desktop" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#B8361F"/></marker></defs>
+<polyline points="180,64 259,64" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="460,64 539,64" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="180,128 259,128" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="420,128 539,128" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="180,192 259,192" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="460,192 539,192" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="180,256 259,256" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="440,256 539,256" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="180,320 259,320" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="400,320 539,320" stroke="#3A3D40" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah-i-d2-desktop)"/>
+<polyline points="970,344 970,404 110,404 110,431" stroke="#B8361F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#ah-c-d2-desktop)"/>
+<polyline points="360,404 360,345" stroke="#B8361F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#ah-c-d2-desktop)"/>
+<polyline points="640,404 640,345" stroke="#B8361F" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#ah-c-d2-desktop)"/>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="0" y="8.0">Features</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="260" y="8.0">Development &amp; back-end</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="540" y="8.0">Design &amp; screens</tspan></text>
+<text text-anchor="start" dominant-baseline="central" font-size="15" font-weight="600" fill="#5F6265"><tspan x="820" y="8.0">In the app</tspan></text>
+<rect x="0.5" y="40.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="64.0">Login</tspan></text>
+<rect x="260.75" y="40.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="40.75" width="148.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="104.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="128.0">Profile</tspan></text>
+<rect x="260.75" y="104.75" width="158.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="104.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="168.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="192.0">Scanning</tspan></text>
+<rect x="260.75" y="168.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="168.75" width="168.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="232.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="256.0">Map</tspan></text>
+<rect x="260.75" y="232.75" width="178.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="232.75" width="198.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="0.5" y="296.5" width="179" height="47" rx="24.0" fill="#FFFFFF" stroke="#CFCDC4" stroke-width="1"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="18" font-weight="500" fill="#202326"><tspan x="90.0" y="320.0">Wallet</tspan></text>
+<rect x="260.75" y="296.75" width="138.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="540.75" y="296.75" width="138.5" height="46.5" rx="8" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="840.75" y="44.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="940.75" y="120.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="1030.75" y="56.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="880.75" y="232.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<rect x="1050.75" y="212.75" width="42.5" height="70.5" rx="9" fill="#FFFFFF" stroke="#202326" stroke-width="1.5"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="970" y="430.0">No overview</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="400" fill="#3A3D40"><tspan x="970" y="450.0">Do the parts form one journey?</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="640" y="430.0">Not consistent</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="400" fill="#3A3D40"><tspan x="640" y="450.0">Do the screens fit together?</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="600" fill="#202326"><tspan x="360" y="430.0">Systems don’t connect</tspan></text>
+<text text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="400" fill="#3A3D40"><tspan x="360" y="450.0">Which dependencies must line up?</tspan></text>
+<rect x="1.0" y="433.0" width="218" height="86" rx="12" fill="#FFFFFF" stroke="#B8361F" stroke-width="2"/>
+<text text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="600" fill="#202326"><tspan x="110" y="465.0">What is needed for launch?</tspan><tspan x="110" y="487.0">What can wait?</tspan></text>
+</svg>
+      </div>
+      <figcaption>Read from right to left: questions raised in the app point back to design and development.</figcaption>
+    </figure>
+  </section>
+
+  <section class="container case-section" aria-labelledby="goal-title">
+    <div class="split">
+      <h2 id="goal-title">Back to the user’s goal</h2>
+      <div class="case-section__body">
+        <p>I used the original brief to define the user’s goal, returning packaging and receiving the deposit, and the recurring journey the app was meant to support. With the design team I ordered the existing screens around that goal.</p>
+        <p>The features did not disappear. They got a place in the journey, under the steps they contribute to. Screens, functionality and systems became equal contributions to the same journey, informing each other instead of handing over in one direction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="change-title">
+    <div class="split">
+      <h2 id="change-title">What it changed</h2>
+      <div class="case-section__body">
+        <p>The overview made visible what was still missing, and that we were behind on what launch required. From there we could discuss specific journeys and the contributions each one needed.</p>
+        <p>It gave the teams a shared basis to decide what was essential for the first version and what could be deferred.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container case-section" aria-labelledby="result-title">
+    <h2 id="result-title">What this case shows, and what it doesn’t</h2>
+    <div class="limits">
+      <div class="limit">
+        <h3>Shown</h3>
+        <p>How a shared view of the user journey helped teams discuss dependencies and the scope of the first version.</p>
+      </div>
+      <div class="limit">
+        <h3>Not claimed</h3>
+        <p>That a new formal development process was introduced. The journey was a shared frame for decisions, not a new way of working on paper.</p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="container next-case" aria-label="Next case">
+    <a href="../cbr/">
+      <span class="next-case__text">
+        <span class="next-case__label">Next case · CBR</span>
+        <span class="next-case__title">From reflection to a better preparation plan</span>
+      </span>
+      <span class="next-case__icon"><svg class="icon" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5"/></svg></span>
+    </a>
+  </nav>
+</main>
+
+<footer class="container site-footer site-footer--rule">
+  <p>© Joris van den Ende</p>
+  <a href="mailto:info@joris.studio">info@joris.studio</a>
+</footer>
+</body>
+</html>
